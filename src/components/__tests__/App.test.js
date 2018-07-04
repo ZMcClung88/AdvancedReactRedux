@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import App from '../App';
 
 it('shows a comment box', () => {
-  const div = document.create('div');
+  const div = document.createElement('div');
 
   ReactDOM.render(<App />, div);
 
   // Looks inside the div
   // and checks to see if the CommentBox is in there
+  console.log(div.innerHTML);
 
-  ReactDom.unmountComponentAtNode(div);
+  ReactDOM.unmountComponentAtNode(div);
 });
